@@ -36,6 +36,8 @@ namespace GenisysATM
         {
             Models.ATM atm = new Models.ATM();
 
+            
+
             if (atm.VerificarInicio(txtCuenta.Text, txtPIN.Text))
             {
                 MessageBox.Show("Bienvenido al sistema de ATM Genisys", "Información");
