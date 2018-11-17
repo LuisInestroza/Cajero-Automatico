@@ -102,6 +102,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SQL\GenisysATM - StoreProcedureTablas.sql" />
     <Content Include="SQL\GenisysATM_V2 - StoredProcedures.sql" />
     <Content Include="SQL\GenisysATM_V2 - Valores Iniciales.sql" />
     <Content Include="SQL\GenisysATM_V2.sql" />
