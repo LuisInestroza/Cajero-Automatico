@@ -142,5 +142,117 @@ namespace GenisysATM.Models
                 conn.CerrarConexion();
             }
         }
+
+
+        /// <summary>
+        /// Funcion quq agrega una nueva cuenta del cliente
+        /// </summary>
+        /// <param name="numero"> numero de cuenta del cliente (caracter 14)</param>
+        /// <param name="idCliente"> clave primaria del cliente (entero)</param>
+        /// <param name="saldo"> cantidad de dinero en la cuenta (decimal)</param>
+        /// <param name="pin"> codigo de la cuenta (caracter 4)</param>
+        /// <returns> Retorna agregando una nueva cuenta</returns>
+        public static CuentaCliente InsertarCuentaCliente(char numero, int idCliente, decimal saldo, char pin)
+        {
+            // Crear la conexion
+            Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
+
+            // Variable para el query
+            string sql;
+
+            // Variable globlal
+            CuentaCliente insertar = new CuentaCliente();
+
+            // Query Insert
+            sql = @"INSERT INTO ATM.CuentaCliente(numero, idCliente, saldo, pin) VALUES (@Numero, @IDCliente, @Saldo, @Pin)";
+
+            SqlCommand cmd = conexion.EjecutarComando(sql);
+            SqlDataReader rdr;
+
+            try
+            {
+                using (cmd)
+                {
+                    // Valores de los campos
+                    cmd.Parameters.Add("@Numero", SqlDbType.Char, 14).Value = numero;
+                    cmd.Parameters.Add("@IDCliente", SqlDbType.Int).Value = idCliente;
+                    cmd.Parameters.Add("@Saldo", SqlDbType.Decimal).Value = saldo;
+                    cmd.Parameters.Add("@Pin", SqlDbType.Char, 4).Value = pin;
+         
+
+                    // Ejecutar comando
+                    rdr = cmd.ExecuteReader();
+
+
+                }
+                while (rdr.Read())
+                {
+
+                    // Leer todos los campos
+                    insertar.numero= rdr.GetString(0);
+                    insertar.idCliente = rdr.GetInt16(1);
+                    insertar.saldo = rdr.GetDecimal(2);
+                    insertar.pin = rdr.GetString(3);
+                  
+
+
+                }
+
+                return insertar;
+            }
+            catch (SqlException exe)
+            {
+                return insertar;
+            }
+            finally
+            {
+                // Cerrar coneccion
+                conexion.CerrarConexion();
+            }
+        }
+
+        /// <summary>
+        ///  Funcion que elimina una cuenta de un cliente
+        /// </summary>
+        /// <param name="numeroCuenta"> numero de la cuenta del cliete (caracter 14)</param>
+        /// <returns> Retorna eliminado una cuenta de la base de datos</returns>
+
+        public static bool EliminarCliente(char numeroCuenta)
+        {
+            // Crear la conexion
+            Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
+
+
+            // Store Procedure
+            SqlCommand cmd = conectar.EjecutarComando("sp_EliminarCuentaCliente");
+
+            // Establecer el comando del Store Procedure
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Parametros
+            cmd.Parameters.Add(new SqlParameter("numero", SqlDbType.Char, 14));
+            cmd.Parameters["numero"].Value = numeroCuenta;
+
+            try
+            {
+
+                // ejercutar comando
+                cmd.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (SqlException exe)
+            {
+
+                return false;
+            }
+            finally
+            {
+                // Cerrar conexion
+                conectar.CerrarConexion();
+            }
+
+        }
+
     }
 }
