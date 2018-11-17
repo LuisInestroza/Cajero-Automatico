@@ -49,6 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clientesCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientesCRUD.Designer.cs">
+      <DependentUpon>clientesCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configuracionCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuracionCRUD.Designer.cs">
+      <DependentUpon>configuracionCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cuentaClienteCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cuentaClienteCRUD.Designer.cs">
+      <DependentUpon>cuentaClienteCRUD.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +90,33 @@
     <Compile Include="Models\TarjetaCredito.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="servicioClienteCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="servicioClienteCRUD.Designer.cs">
+      <DependentUpon>servicioClienteCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="servicioPublicoCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="servicioPublicoCRUD.Designer.cs">
+      <DependentUpon>servicioPublicoCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tarjetaCreditoCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tarjetaCreditoCRUD.Designer.cs">
+      <DependentUpon>tarjetaCreditoCRUD.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="clientesCRUD.resx">
+      <DependentUpon>clientesCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuracionCRUD.resx">
+      <DependentUpon>configuracionCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cuentaClienteCRUD.resx">
+      <DependentUpon>cuentaClienteCRUD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +132,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="servicioClienteCRUD.resx">
+      <DependentUpon>servicioClienteCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="servicioPublicoCRUD.resx">
+      <DependentUpon>servicioPublicoCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tarjetaCreditoCRUD.resx">
+      <DependentUpon>tarjetaCreditoCRUD.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

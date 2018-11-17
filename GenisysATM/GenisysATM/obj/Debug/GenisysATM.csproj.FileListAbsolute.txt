@@ -11,3 +11,16 @@ C:\Users\Usuario\Desktop\GenisysATM-feat102\GenisysATM\GenisysATM\obj\Debug\Geni
 C:\Users\Usuario\Desktop\GenisysATM-feat102\GenisysATM\GenisysATM\obj\Debug\GenisysATM.csproj.CopyComplete
 C:\Users\Usuario\Desktop\GenisysATM-feat102\GenisysATM\GenisysATM\obj\Debug\GenisysATM.exe
 C:\Users\Usuario\Desktop\GenisysATM-feat102\GenisysATM\GenisysATM\obj\Debug\GenisysATM.pdb
+C:\Users\Usuario\Desktop\Cajero-Automatico\GenisysATM\GenisysATM\bin\Debug\GenisysATM.exe.config
+C:\Users\Usuario\Desktop\Cajero-Automatico\GenisysATM\GenisysATM\bin\Debug\GenisysATM.exe
+C:\Users\Usuario\Desktop\Cajero-Automatico\GenisysATM\GenisysATM\bin\Debug\GenisysATM.pdb
+C:\Users\Usuario\Desktop\Cajero-Automatico\GenisysATM\GenisysATM\bin\Debug\MaterialSkin.dll
+C:\Users\Usuario\Desktop\Cajero-Automatico\GenisysATM\GenisysATM\obj\Debug\GenisysATM.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\Cajero-Automatico\GenisysATM\GenisysATM\obj\Debug\GenisysATM.frmInicio.resources
+C:\Users\Usuario\Desktop\Cajero-Automatico\GenisysATM\GenisysATM\obj\Debug\GenisysATM.frmMenuPrincipal.resources
+C:\Users\Usuario\Desktop\Cajero-Automatico\GenisysATM\GenisysATM\obj\Debug\GenisysATM.Properties.Resources.resources
+C:\Users\Usuario\Desktop\Cajero-Automatico\GenisysATM\GenisysATM\obj\Debug\GenisysATM.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\Cajero-Automatico\GenisysATM\GenisysATM\obj\Debug\GenisysATM.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Cajero-Automatico\GenisysATM\GenisysATM\obj\Debug\GenisysATM.csproj.CopyComplete
+C:\Users\Usuario\Desktop\Cajero-Automatico\GenisysATM\GenisysATM\obj\Debug\GenisysATM.exe
+C:\Users\Usuario\Desktop\Cajero-Automatico\GenisysATM\GenisysATM\obj\Debug\GenisysATM.pdb

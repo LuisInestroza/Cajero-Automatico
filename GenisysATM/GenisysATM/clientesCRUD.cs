@@ -8,17 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// Aplicando MaterialSkin
+// MaterialSkin
 using MaterialSkin;
 using MaterialSkin.Controls;
 
+
 namespace GenisysATM
 {
-    public partial class frmInicio : MaterialForm
+    public partial class clientesCRUD : MaterialForm
     {
         private readonly MaterialSkinManager materialSkinManager;
 
-        public frmInicio()
+        public clientesCRUD()
         {
             InitializeComponent();
 
@@ -30,27 +31,6 @@ namespace GenisysATM
                 Primary.Blue500, Primary.Blue700, Primary.Blue200,
                 Accent.Orange400, TextShade.WHITE
             );
-        }
-
-        private void btnIngresar_Click(object sender, EventArgs e)
-        {
-            Models.ATM atm = new Models.ATM();
-
-            
-
-            if (atm.VerificarInicio(txtCuenta.Text, txtPIN.Text))
-            {
-                MessageBox.Show("Bienvenido al sistema de ATM Genisys", "Información");
-                frmMenuPrincipal abrir = new frmMenuPrincipal();
-                abrir.Show();
-            }
-            else
-                MessageBox.Show("Número de cuenta o PIN erróneos", "Información");
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
