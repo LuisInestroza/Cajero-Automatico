@@ -46,6 +46,7 @@ namespace GenisysATM.Models
             {
                 using (cmd)
                 {
+                    // Parametros de los campos
                     cmd.Parameters.Add("@identidad", SqlDbType.Int).Value = idCliente;
 
                     rdr = cmd.ExecuteReader();
@@ -53,6 +54,7 @@ namespace GenisysATM.Models
 
                 while (rdr.Read())
                 {
+                    // Leer los campos
                     resultado.id = rdr.GetInt16(0);
                     resultado.descripcion = rdr.GetString(1);
                     resultado.monto = rdr.GetDecimal(2);
@@ -84,7 +86,7 @@ namespace GenisysATM.Models
         /// <param name="idCliente">campo primario de la tabla Cliente (entero) </param>
         /// <returns> Retorna agregando una nueva tarjeta de credito</returns>
 
-        public static TarjetaCredito InsertarTrjeta(string descripcion, decimal monto, decimal limite, int idCliente)
+        public static TarjetaCredito InsertarTarjeta(string descripcion, decimal monto, decimal limite, int idCliente)
         {
             // Crear la conexion
             Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -148,14 +150,14 @@ namespace GenisysATM.Models
         /// <param name="idCliente">campo primario de la tabla Cliente (entero)</param>
         /// <returns> Retorna eliminado una tarjeta de credito</returns>
 
-        public static bool EliminarCliente(int idCliente)
+        public static bool EliminarTarjetaCredito(int idCliente)
         {
             // Crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
 
 
             // Store Procedure
-            SqlCommand cmd = conectar.EjecutarComando("sp_EliminarTarjeta");
+            SqlCommand cmd = conectar.EjecutarComando("sp_EliminarTarjetaCredito");
 
             // Establecer el comando del Store Procedure
             cmd.CommandType = CommandType.StoredProcedure;
@@ -194,13 +196,13 @@ namespace GenisysATM.Models
         /// <param name="idCliente">campo primario de la tabla Cliente (entero) </param>
         /// <returns> Retorna actualizando una nueva tarjeta de credito</returns>
 
-        public static bool ActualizarCliente(int id, string descripcion, decimal monto, decimal limite, int idCliente)
+        public static bool ActualizarTarjeta(int id, string descripcion, decimal monto, decimal limite, int idCliente)
         {
             // crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
 
             // Store Procedure
-            SqlCommand cmd = conectar.EjecutarComando("sp_ActualizarClienta");
+            SqlCommand cmd = conectar.EjecutarComando("sp_ActualizarTarjetaCredito");
 
             // Establecer el comando del Store Procedure
             cmd.CommandType = CommandType.StoredProcedure;
