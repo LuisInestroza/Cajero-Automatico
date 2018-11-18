@@ -1,6 +1,6 @@
 ﻿namespace GenisysATM
 {
-    partial class servicioPublicoCRUD
+    partial class frmServicioPublico
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtTelefono = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtIdentidad = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtDescripcion = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtID = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.lbDescripcion = new MaterialSkin.Controls.MaterialLabel();
+            this.lbID = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnListar = new MaterialSkin.Controls.MaterialFlatButton();
@@ -40,61 +40,61 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtTelefono
+            // txtDescripcion
             // 
-            this.txtTelefono.Depth = 0;
-            this.txtTelefono.Hint = "";
-            this.txtTelefono.Location = new System.Drawing.Point(145, 294);
-            this.txtTelefono.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.PasswordChar = '\0';
-            this.txtTelefono.SelectedText = "";
-            this.txtTelefono.SelectionLength = 0;
-            this.txtTelefono.SelectionStart = 0;
-            this.txtTelefono.Size = new System.Drawing.Size(166, 23);
-            this.txtTelefono.TabIndex = 43;
-            this.txtTelefono.UseSystemPasswordChar = false;
+            this.txtDescripcion.Depth = 0;
+            this.txtDescripcion.Hint = "";
+            this.txtDescripcion.Location = new System.Drawing.Point(35, 337);
+            this.txtDescripcion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.PasswordChar = '\0';
+            this.txtDescripcion.SelectedText = "";
+            this.txtDescripcion.SelectionLength = 0;
+            this.txtDescripcion.SelectionStart = 0;
+            this.txtDescripcion.Size = new System.Drawing.Size(526, 23);
+            this.txtDescripcion.TabIndex = 43;
+            this.txtDescripcion.UseSystemPasswordChar = false;
             // 
-            // txtIdentidad
+            // txtID
             // 
-            this.txtIdentidad.Depth = 0;
-            this.txtIdentidad.Hint = "";
-            this.txtIdentidad.Location = new System.Drawing.Point(110, 250);
-            this.txtIdentidad.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtIdentidad.Name = "txtIdentidad";
-            this.txtIdentidad.PasswordChar = '\0';
-            this.txtIdentidad.SelectedText = "";
-            this.txtIdentidad.SelectionLength = 0;
-            this.txtIdentidad.SelectionStart = 0;
-            this.txtIdentidad.Size = new System.Drawing.Size(166, 23);
-            this.txtIdentidad.TabIndex = 42;
-            this.txtIdentidad.UseSystemPasswordChar = false;
+            this.txtID.Depth = 0;
+            this.txtID.Hint = "";
+            this.txtID.Location = new System.Drawing.Point(62, 250);
+            this.txtID.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtID.Name = "txtID";
+            this.txtID.PasswordChar = '\0';
+            this.txtID.SelectedText = "";
+            this.txtID.SelectionLength = 0;
+            this.txtID.SelectionStart = 0;
+            this.txtID.Size = new System.Drawing.Size(166, 23);
+            this.txtID.TabIndex = 42;
+            this.txtID.UseSystemPasswordChar = false;
             // 
-            // materialLabel5
+            // lbDescripcion
             // 
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(31, 298);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(93, 19);
-            this.materialLabel5.TabIndex = 41;
-            this.materialLabel5.Text = "Descripcion:";
+            this.lbDescripcion.AutoSize = true;
+            this.lbDescripcion.Depth = 0;
+            this.lbDescripcion.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lbDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbDescripcion.Location = new System.Drawing.Point(31, 298);
+            this.lbDescripcion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbDescripcion.Name = "lbDescripcion";
+            this.lbDescripcion.Size = new System.Drawing.Size(93, 19);
+            this.lbDescripcion.TabIndex = 41;
+            this.lbDescripcion.Text = "Descripcion:";
             // 
-            // materialLabel1
+            // lbID
             // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(30, 254);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(25, 19);
-            this.materialLabel1.TabIndex = 38;
-            this.materialLabel1.Text = "Id:";
+            this.lbID.AutoSize = true;
+            this.lbID.Depth = 0;
+            this.lbID.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lbID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbID.Location = new System.Drawing.Point(31, 254);
+            this.lbID.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(25, 19);
+            this.lbID.TabIndex = 38;
+            this.lbID.Text = "Id:";
             // 
             // dataGridView1
             // 
@@ -118,68 +118,69 @@
             this.btnActualizar.TabIndex = 36;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnListar
             // 
             this.btnListar.AutoSize = true;
-            this.btnListar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnListar.Depth = 0;
             this.btnListar.Location = new System.Drawing.Point(423, 104);
             this.btnListar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnListar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnListar.Name = "btnListar";
             this.btnListar.Primary = false;
-            this.btnListar.Size = new System.Drawing.Size(58, 36);
+            this.btnListar.Size = new System.Drawing.Size(94, 36);
             this.btnListar.TabIndex = 35;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.AutoSize = true;
-            this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEliminar.Depth = 0;
             this.btnEliminar.Location = new System.Drawing.Point(525, 104);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Primary = false;
-            this.btnEliminar.Size = new System.Drawing.Size(74, 36);
+            this.btnEliminar.Size = new System.Drawing.Size(94, 36);
             this.btnEliminar.TabIndex = 34;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
             this.btnAgregar.AutoSize = true;
-            this.btnAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAgregar.Depth = 0;
             this.btnAgregar.Location = new System.Drawing.Point(423, 152);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Primary = false;
-            this.btnAgregar.Size = new System.Drawing.Size(74, 36);
+            this.btnAgregar.Size = new System.Drawing.Size(94, 36);
             this.btnAgregar.TabIndex = 33;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // servicioPublicoCRUD
+            // frmServicioPublico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 410);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.txtIdentidad);
-            this.Controls.Add(this.materialLabel5);
-            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.lbDescripcion);
+            this.Controls.Add(this.lbID);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.Name = "servicioPublicoCRUD";
-            this.Text = "servicioPublicoCRUD";
+            this.Name = "frmServicioPublico";
+            this.Text = "Servicio Publico";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -187,10 +188,10 @@
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtTelefono;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtIdentidad;
-        private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtDescripcion;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtID;
+        private MaterialSkin.Controls.MaterialLabel lbDescripcion;
+        private MaterialSkin.Controls.MaterialLabel lbID;
         private System.Windows.Forms.DataGridView dataGridView1;
         private MaterialSkin.Controls.MaterialFlatButton btnActualizar;
         private MaterialSkin.Controls.MaterialFlatButton btnListar;

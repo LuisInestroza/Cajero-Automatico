@@ -176,7 +176,7 @@ namespace GenisysATM.Models
         /// <param name="id"> clave primaria (entero)</param>
         /// <param name="descripcion"> descripcion del servicio publico </param>
         /// <returns> Retorna actualizando todos los servicio de la base de datos </returns>
-        public static bool ActualizarServicioPublixco(int id, string descripcion)
+        public static bool ActualizarServicioPublico(int id, string descripcion)
         {
             // crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
