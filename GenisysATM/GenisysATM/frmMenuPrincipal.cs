@@ -72,5 +72,11 @@ namespace GenisysATM
         {
             this.Close();
         }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            frmClientes a = new frmClientes();
+            a.Show();
+        }
     }
 }

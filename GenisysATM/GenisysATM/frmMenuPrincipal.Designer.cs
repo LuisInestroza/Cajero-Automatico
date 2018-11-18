@@ -39,6 +39,8 @@
             this.lbCuenta = new MaterialSkin.Controls.MaterialLabel();
             this.lbNuemeroCuenta = new MaterialSkin.Controls.MaterialLabel();
             this.btnCerrarSesion = new MaterialSkin.Controls.MaterialFlatButton();
+            this.gbOpciones = new System.Windows.Forms.GroupBox();
+            this.gbOpciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCliente
@@ -46,7 +48,7 @@
             this.btnCliente.AutoSize = true;
             this.btnCliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCliente.Depth = 0;
-            this.btnCliente.Location = new System.Drawing.Point(100, 160);
+            this.btnCliente.Location = new System.Drawing.Point(43, 28);
             this.btnCliente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCliente.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCliente.Name = "btnCliente";
@@ -62,7 +64,7 @@
             this.btnTarjetaCredito.AutoSize = true;
             this.btnTarjetaCredito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnTarjetaCredito.Depth = 0;
-            this.btnTarjetaCredito.Location = new System.Drawing.Point(375, 219);
+            this.btnTarjetaCredito.Location = new System.Drawing.Point(318, 87);
             this.btnTarjetaCredito.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnTarjetaCredito.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnTarjetaCredito.Name = "btnTarjetaCredito";
@@ -78,7 +80,7 @@
             this.btnConfiguracion.AutoSize = true;
             this.btnConfiguracion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnConfiguracion.Depth = 0;
-            this.btnConfiguracion.Location = new System.Drawing.Point(375, 295);
+            this.btnConfiguracion.Location = new System.Drawing.Point(318, 163);
             this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnConfiguracion.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnConfiguracion.Name = "btnConfiguracion";
@@ -94,7 +96,7 @@
             this.btnCuentaCliente.AutoSize = true;
             this.btnCuentaCliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCuentaCliente.Depth = 0;
-            this.btnCuentaCliente.Location = new System.Drawing.Point(373, 160);
+            this.btnCuentaCliente.Location = new System.Drawing.Point(316, 28);
             this.btnCuentaCliente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCuentaCliente.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCuentaCliente.Name = "btnCuentaCliente";
@@ -110,7 +112,7 @@
             this.btnServicioPublico.AutoSize = true;
             this.btnServicioPublico.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnServicioPublico.Depth = 0;
-            this.btnServicioPublico.Location = new System.Drawing.Point(104, 295);
+            this.btnServicioPublico.Location = new System.Drawing.Point(47, 163);
             this.btnServicioPublico.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnServicioPublico.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnServicioPublico.Name = "btnServicioPublico";
@@ -126,7 +128,7 @@
             this.btnServicioCliente.AutoSize = true;
             this.btnServicioCliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnServicioCliente.Depth = 0;
-            this.btnServicioCliente.Location = new System.Drawing.Point(100, 219);
+            this.btnServicioCliente.Location = new System.Drawing.Point(43, 87);
             this.btnServicioCliente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnServicioCliente.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnServicioCliente.Name = "btnServicioCliente";
@@ -205,25 +207,38 @@
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
+            // gbOpciones
+            // 
+            this.gbOpciones.Controls.Add(this.btnCuentaCliente);
+            this.gbOpciones.Controls.Add(this.btnCliente);
+            this.gbOpciones.Controls.Add(this.btnServicioCliente);
+            this.gbOpciones.Controls.Add(this.btnTarjetaCredito);
+            this.gbOpciones.Controls.Add(this.btnServicioPublico);
+            this.gbOpciones.Controls.Add(this.btnConfiguracion);
+            this.gbOpciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbOpciones.Location = new System.Drawing.Point(79, 142);
+            this.gbOpciones.Name = "gbOpciones";
+            this.gbOpciones.Size = new System.Drawing.Size(495, 208);
+            this.gbOpciones.TabIndex = 11;
+            this.gbOpciones.TabStop = false;
+            this.gbOpciones.Text = "Opciones";
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 410);
-            this.Controls.Add(this.btnCliente);
-            this.Controls.Add(this.btnTarjetaCredito);
+            this.Controls.Add(this.gbOpciones);
             this.Controls.Add(this.lbNuemeroCuenta);
-            this.Controls.Add(this.btnConfiguracion);
             this.Controls.Add(this.lbCuenta);
-            this.Controls.Add(this.btnCuentaCliente);
-            this.Controls.Add(this.btnServicioPublico);
             this.Controls.Add(this.lbNombreUsuario);
-            this.Controls.Add(this.btnServicioCliente);
             this.Controls.Add(this.lbUsuario);
             this.Controls.Add(this.btnCerrarSesion);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMenuPrincipal";
             this.Text = "Menú Principal Genisys ATM";
+            this.gbOpciones.ResumeLayout(false);
+            this.gbOpciones.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +257,6 @@
         private MaterialSkin.Controls.MaterialLabel lbCuenta;
         private MaterialSkin.Controls.MaterialLabel lbNuemeroCuenta;
         private MaterialSkin.Controls.MaterialFlatButton btnCerrarSesion;
+        private System.Windows.Forms.GroupBox gbOpciones;
     }
 }
