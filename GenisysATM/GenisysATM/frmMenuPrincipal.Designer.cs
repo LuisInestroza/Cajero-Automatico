@@ -34,10 +34,6 @@
             this.btnCuentaCliente = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnServicioPublico = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnServicioCliente = new MaterialSkin.Controls.MaterialFlatButton();
-            this.lbUsuario = new MaterialSkin.Controls.MaterialLabel();
-            this.lbNombreUsuario = new MaterialSkin.Controls.MaterialLabel();
-            this.lbCuenta = new MaterialSkin.Controls.MaterialLabel();
-            this.lbNuemeroCuenta = new MaterialSkin.Controls.MaterialLabel();
             this.btnCerrarSesion = new MaterialSkin.Controls.MaterialFlatButton();
             this.gbOpciones = new System.Windows.Forms.GroupBox();
             this.gbOpciones.SuspendLayout();
@@ -139,64 +135,12 @@
             this.btnServicioCliente.UseVisualStyleBackColor = true;
             this.btnServicioCliente.Click += new System.EventHandler(this.btnServicioCliente_Click);
             // 
-            // lbUsuario
-            // 
-            this.lbUsuario.AutoSize = true;
-            this.lbUsuario.Depth = 0;
-            this.lbUsuario.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbUsuario.Location = new System.Drawing.Point(32, 88);
-            this.lbUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lbUsuario.Name = "lbUsuario";
-            this.lbUsuario.Size = new System.Drawing.Size(65, 19);
-            this.lbUsuario.TabIndex = 7;
-            this.lbUsuario.Text = "Usuario:";
-            // 
-            // lbNombreUsuario
-            // 
-            this.lbNombreUsuario.AutoSize = true;
-            this.lbNombreUsuario.Depth = 0;
-            this.lbNombreUsuario.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lbNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbNombreUsuario.Location = new System.Drawing.Point(112, 88);
-            this.lbNombreUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lbNombreUsuario.Name = "lbNombreUsuario";
-            this.lbNombreUsuario.Size = new System.Drawing.Size(127, 19);
-            this.lbNombreUsuario.TabIndex = 8;
-            this.lbNombreUsuario.Text = "lbNombreUsuario";
-            // 
-            // lbCuenta
-            // 
-            this.lbCuenta.AutoSize = true;
-            this.lbCuenta.Depth = 0;
-            this.lbCuenta.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lbCuenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbCuenta.Location = new System.Drawing.Point(321, 88);
-            this.lbCuenta.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lbCuenta.Name = "lbCuenta";
-            this.lbCuenta.Size = new System.Drawing.Size(60, 19);
-            this.lbCuenta.TabIndex = 9;
-            this.lbCuenta.Text = "Cuenta:";
-            // 
-            // lbNuemeroCuenta
-            // 
-            this.lbNuemeroCuenta.AutoSize = true;
-            this.lbNuemeroCuenta.Depth = 0;
-            this.lbNuemeroCuenta.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lbNuemeroCuenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbNuemeroCuenta.Location = new System.Drawing.Point(420, 88);
-            this.lbNuemeroCuenta.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lbNuemeroCuenta.Name = "lbNuemeroCuenta";
-            this.lbNuemeroCuenta.Size = new System.Drawing.Size(130, 19);
-            this.lbNuemeroCuenta.TabIndex = 10;
-            this.lbNuemeroCuenta.Text = "lbNuemeroCuenta";
-            // 
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.AutoSize = true;
             this.btnCerrarSesion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCerrarSesion.Depth = 0;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(550, 359);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(567, 77);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCerrarSesion.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCerrarSesion.Name = "btnCerrarSesion";
@@ -216,7 +160,7 @@
             this.gbOpciones.Controls.Add(this.btnServicioPublico);
             this.gbOpciones.Controls.Add(this.btnConfiguracion);
             this.gbOpciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbOpciones.Location = new System.Drawing.Point(79, 142);
+            this.gbOpciones.Location = new System.Drawing.Point(97, 137);
             this.gbOpciones.Name = "gbOpciones";
             this.gbOpciones.Size = new System.Drawing.Size(495, 208);
             this.gbOpciones.TabIndex = 11;
@@ -229,10 +173,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 410);
             this.Controls.Add(this.gbOpciones);
-            this.Controls.Add(this.lbNuemeroCuenta);
-            this.Controls.Add(this.lbCuenta);
-            this.Controls.Add(this.lbNombreUsuario);
-            this.Controls.Add(this.lbUsuario);
             this.Controls.Add(this.btnCerrarSesion);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMenuPrincipal";
@@ -252,10 +192,6 @@
         private MaterialSkin.Controls.MaterialFlatButton btnCuentaCliente;
         private MaterialSkin.Controls.MaterialFlatButton btnServicioPublico;
         private MaterialSkin.Controls.MaterialFlatButton btnServicioCliente;
-        private MaterialSkin.Controls.MaterialLabel lbUsuario;
-        private MaterialSkin.Controls.MaterialLabel lbNombreUsuario;
-        private MaterialSkin.Controls.MaterialLabel lbCuenta;
-        private MaterialSkin.Controls.MaterialLabel lbNuemeroCuenta;
         private MaterialSkin.Controls.MaterialFlatButton btnCerrarSesion;
         private System.Windows.Forms.GroupBox gbOpciones;
     }
