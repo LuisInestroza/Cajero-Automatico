@@ -1,6 +1,6 @@
 ﻿namespace GenisysATM
 {
-    partial class cuentaClienteCRUD
+    partial class frmCuentaCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtApellido = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtTelefono = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtIdentidad = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtSaldo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtIDCliente = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtPIN = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtNumero = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.lbPin = new MaterialSkin.Controls.MaterialLabel();
+            this.lbSaldo = new MaterialSkin.Controls.MaterialLabel();
+            this.lbIDCliente = new MaterialSkin.Controls.MaterialLabel();
+            this.lbNumero = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnListar = new MaterialSkin.Controls.MaterialFlatButton();
@@ -44,117 +44,117 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtApellido
+            // txtSaldo
             // 
-            this.txtApellido.Depth = 0;
-            this.txtApellido.Hint = "";
-            this.txtApellido.Location = new System.Drawing.Point(132, 330);
-            this.txtApellido.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.PasswordChar = '\0';
-            this.txtApellido.SelectedText = "";
-            this.txtApellido.SelectionLength = 0;
-            this.txtApellido.SelectionStart = 0;
-            this.txtApellido.Size = new System.Drawing.Size(166, 23);
-            this.txtApellido.TabIndex = 45;
-            this.txtApellido.UseSystemPasswordChar = false;
+            this.txtSaldo.Depth = 0;
+            this.txtSaldo.Hint = "";
+            this.txtSaldo.Location = new System.Drawing.Point(132, 330);
+            this.txtSaldo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtSaldo.Name = "txtSaldo";
+            this.txtSaldo.PasswordChar = '\0';
+            this.txtSaldo.SelectedText = "";
+            this.txtSaldo.SelectionLength = 0;
+            this.txtSaldo.SelectionStart = 0;
+            this.txtSaldo.Size = new System.Drawing.Size(166, 23);
+            this.txtSaldo.TabIndex = 45;
+            this.txtSaldo.UseSystemPasswordChar = false;
             // 
-            // txtNombre
+            // txtIDCliente
             // 
-            this.txtNombre.Depth = 0;
-            this.txtNombre.Hint = "";
-            this.txtNombre.Location = new System.Drawing.Point(132, 296);
-            this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PasswordChar = '\0';
-            this.txtNombre.SelectedText = "";
-            this.txtNombre.SelectionLength = 0;
-            this.txtNombre.SelectionStart = 0;
-            this.txtNombre.Size = new System.Drawing.Size(166, 23);
-            this.txtNombre.TabIndex = 44;
-            this.txtNombre.UseSystemPasswordChar = false;
+            this.txtIDCliente.Depth = 0;
+            this.txtIDCliente.Hint = "";
+            this.txtIDCliente.Location = new System.Drawing.Point(132, 296);
+            this.txtIDCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtIDCliente.Name = "txtIDCliente";
+            this.txtIDCliente.PasswordChar = '\0';
+            this.txtIDCliente.SelectedText = "";
+            this.txtIDCliente.SelectionLength = 0;
+            this.txtIDCliente.SelectionStart = 0;
+            this.txtIDCliente.Size = new System.Drawing.Size(166, 23);
+            this.txtIDCliente.TabIndex = 44;
+            this.txtIDCliente.UseSystemPasswordChar = false;
             // 
-            // txtTelefono
+            // txtPIN
             // 
-            this.txtTelefono.Depth = 0;
-            this.txtTelefono.Hint = "";
-            this.txtTelefono.Location = new System.Drawing.Point(406, 259);
-            this.txtTelefono.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.PasswordChar = '\0';
-            this.txtTelefono.SelectedText = "";
-            this.txtTelefono.SelectionLength = 0;
-            this.txtTelefono.SelectionStart = 0;
-            this.txtTelefono.Size = new System.Drawing.Size(166, 23);
-            this.txtTelefono.TabIndex = 43;
-            this.txtTelefono.UseSystemPasswordChar = false;
+            this.txtPIN.Depth = 0;
+            this.txtPIN.Hint = "";
+            this.txtPIN.Location = new System.Drawing.Point(406, 259);
+            this.txtPIN.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtPIN.Name = "txtPIN";
+            this.txtPIN.PasswordChar = '\0';
+            this.txtPIN.SelectedText = "";
+            this.txtPIN.SelectionLength = 0;
+            this.txtPIN.SelectionStart = 0;
+            this.txtPIN.Size = new System.Drawing.Size(166, 23);
+            this.txtPIN.TabIndex = 43;
+            this.txtPIN.UseSystemPasswordChar = false;
             // 
-            // txtIdentidad
+            // txtNumero
             // 
-            this.txtIdentidad.Depth = 0;
-            this.txtIdentidad.Hint = "";
-            this.txtIdentidad.Location = new System.Drawing.Point(132, 259);
-            this.txtIdentidad.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtIdentidad.Name = "txtIdentidad";
-            this.txtIdentidad.PasswordChar = '\0';
-            this.txtIdentidad.SelectedText = "";
-            this.txtIdentidad.SelectionLength = 0;
-            this.txtIdentidad.SelectionStart = 0;
-            this.txtIdentidad.Size = new System.Drawing.Size(166, 23);
-            this.txtIdentidad.TabIndex = 42;
-            this.txtIdentidad.UseSystemPasswordChar = false;
+            this.txtNumero.Depth = 0;
+            this.txtNumero.Hint = "";
+            this.txtNumero.Location = new System.Drawing.Point(132, 259);
+            this.txtNumero.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.PasswordChar = '\0';
+            this.txtNumero.SelectedText = "";
+            this.txtNumero.SelectionLength = 0;
+            this.txtNumero.SelectionStart = 0;
+            this.txtNumero.Size = new System.Drawing.Size(166, 23);
+            this.txtNumero.TabIndex = 42;
+            this.txtNumero.UseSystemPasswordChar = false;
             // 
-            // materialLabel5
+            // lbPin
             // 
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(350, 263);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(37, 19);
-            this.materialLabel5.TabIndex = 41;
-            this.materialLabel5.Text = "PIN:";
+            this.lbPin.AutoSize = true;
+            this.lbPin.Depth = 0;
+            this.lbPin.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lbPin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbPin.Location = new System.Drawing.Point(350, 263);
+            this.lbPin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbPin.Name = "lbPin";
+            this.lbPin.Size = new System.Drawing.Size(37, 19);
+            this.lbPin.TabIndex = 41;
+            this.lbPin.Text = "PIN:";
             // 
-            // materialLabel3
+            // lbSaldo
             // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(52, 330);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(51, 19);
-            this.materialLabel3.TabIndex = 40;
-            this.materialLabel3.Text = "Saldo:";
+            this.lbSaldo.AutoSize = true;
+            this.lbSaldo.Depth = 0;
+            this.lbSaldo.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lbSaldo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbSaldo.Location = new System.Drawing.Point(52, 330);
+            this.lbSaldo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbSaldo.Name = "lbSaldo";
+            this.lbSaldo.Size = new System.Drawing.Size(51, 19);
+            this.lbSaldo.TabIndex = 40;
+            this.lbSaldo.Text = "Saldo:";
             // 
-            // materialLabel2
+            // lbIDCliente
             // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(52, 296);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(78, 19);
-            this.materialLabel2.TabIndex = 39;
-            this.materialLabel2.Text = "ID-Cliente:";
+            this.lbIDCliente.AutoSize = true;
+            this.lbIDCliente.Depth = 0;
+            this.lbIDCliente.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lbIDCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbIDCliente.Location = new System.Drawing.Point(52, 296);
+            this.lbIDCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbIDCliente.Name = "lbIDCliente";
+            this.lbIDCliente.Size = new System.Drawing.Size(78, 19);
+            this.lbIDCliente.TabIndex = 39;
+            this.lbIDCliente.Text = "ID-Cliente:";
             // 
-            // materialLabel1
+            // lbNumero
             // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(52, 263);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(67, 19);
-            this.materialLabel1.TabIndex = 38;
-            this.materialLabel1.Text = "Numero:";
+            this.lbNumero.AutoSize = true;
+            this.lbNumero.Depth = 0;
+            this.lbNumero.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lbNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbNumero.Location = new System.Drawing.Point(52, 263);
+            this.lbNumero.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbNumero.Name = "lbNumero";
+            this.lbNumero.Size = new System.Drawing.Size(67, 19);
+            this.lbNumero.TabIndex = 38;
+            this.lbNumero.Text = "Numero:";
             // 
             // dataGridView1
             // 
@@ -178,72 +178,73 @@
             this.btnActualizar.TabIndex = 36;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnListar
             // 
             this.btnListar.AutoSize = true;
-            this.btnListar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnListar.Depth = 0;
             this.btnListar.Location = new System.Drawing.Point(445, 113);
             this.btnListar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnListar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnListar.Name = "btnListar";
             this.btnListar.Primary = false;
-            this.btnListar.Size = new System.Drawing.Size(58, 36);
+            this.btnListar.Size = new System.Drawing.Size(94, 36);
             this.btnListar.TabIndex = 35;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.AutoSize = true;
-            this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEliminar.Depth = 0;
             this.btnEliminar.Location = new System.Drawing.Point(547, 113);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Primary = false;
-            this.btnEliminar.Size = new System.Drawing.Size(74, 36);
+            this.btnEliminar.Size = new System.Drawing.Size(94, 36);
             this.btnEliminar.TabIndex = 34;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
             this.btnAgregar.AutoSize = true;
-            this.btnAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAgregar.Depth = 0;
             this.btnAgregar.Location = new System.Drawing.Point(445, 161);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Primary = false;
-            this.btnAgregar.Size = new System.Drawing.Size(74, 36);
+            this.btnAgregar.Size = new System.Drawing.Size(94, 36);
             this.btnAgregar.TabIndex = 33;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // cuentaClienteCRUD
+            // frmCuentaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 410);
-            this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.txtIdentidad);
-            this.Controls.Add(this.materialLabel5);
-            this.Controls.Add(this.materialLabel3);
-            this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.txtSaldo);
+            this.Controls.Add(this.txtIDCliente);
+            this.Controls.Add(this.txtPIN);
+            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.lbPin);
+            this.Controls.Add(this.lbSaldo);
+            this.Controls.Add(this.lbIDCliente);
+            this.Controls.Add(this.lbNumero);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.Name = "cuentaClienteCRUD";
-            this.Text = "cuentaClienteCRUD";
+            this.Name = "frmCuentaCliente";
+            this.Text = "Cuenta Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -252,14 +253,14 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtApellido;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtNombre;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtTelefono;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtIdentidad;
-        private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtSaldo;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtIDCliente;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtPIN;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNumero;
+        private MaterialSkin.Controls.MaterialLabel lbPin;
+        private MaterialSkin.Controls.MaterialLabel lbSaldo;
+        private MaterialSkin.Controls.MaterialLabel lbIDCliente;
+        private MaterialSkin.Controls.MaterialLabel lbNumero;
         private System.Windows.Forms.DataGridView dataGridView1;
         private MaterialSkin.Controls.MaterialFlatButton btnActualizar;
         private MaterialSkin.Controls.MaterialFlatButton btnListar;

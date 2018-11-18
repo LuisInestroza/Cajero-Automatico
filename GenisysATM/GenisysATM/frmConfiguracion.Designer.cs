@@ -183,13 +183,14 @@
             // btnListar
             // 
             this.btnListar.AutoSize = true;
+            this.btnListar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnListar.Depth = 0;
             this.btnListar.Location = new System.Drawing.Point(422, 105);
             this.btnListar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnListar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnListar.Name = "btnListar";
             this.btnListar.Primary = false;
-            this.btnListar.Size = new System.Drawing.Size(94, 36);
+            this.btnListar.Size = new System.Drawing.Size(58, 36);
             this.btnListar.TabIndex = 19;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
@@ -198,13 +199,14 @@
             // btnEliminar
             // 
             this.btnEliminar.AutoSize = true;
+            this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEliminar.Depth = 0;
             this.btnEliminar.Location = new System.Drawing.Point(524, 105);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Primary = false;
-            this.btnEliminar.Size = new System.Drawing.Size(94, 36);
+            this.btnEliminar.Size = new System.Drawing.Size(74, 36);
             this.btnEliminar.TabIndex = 18;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -213,13 +215,14 @@
             // btnAgregar
             // 
             this.btnAgregar.AutoSize = true;
+            this.btnAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAgregar.Depth = 0;
             this.btnAgregar.Location = new System.Drawing.Point(422, 153);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Primary = false;
-            this.btnAgregar.Size = new System.Drawing.Size(94, 36);
+            this.btnAgregar.Size = new System.Drawing.Size(74, 36);
             this.btnAgregar.TabIndex = 17;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -244,7 +247,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Name = "frmConfiguracion";
-            this.Text = "configuracionCRUD";
+            this.Text = "Configuración";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

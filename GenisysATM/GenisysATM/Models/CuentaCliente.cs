@@ -152,7 +152,7 @@ namespace GenisysATM.Models
         /// <param name="saldo"> cantidad de dinero en la cuenta (decimal)</param>
         /// <param name="pin"> codigo de la cuenta (caracter 4)</param>
         /// <returns> Retorna agregando una nueva cuenta</returns>
-        public static CuentaCliente InsertarCuentaCliente(char numero, int idCliente, decimal saldo, char pin)
+        public static CuentaCliente InsertarCuentaCliente(string numero, int idCliente, decimal saldo, string pin)
         {
             // Crear la conexion
             Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -217,7 +217,7 @@ namespace GenisysATM.Models
         /// <param name="numeroCuenta"> numero de la cuenta del cliete (caracter 14)</param>
         /// <returns> Retorna eliminado una cuenta de la base de datos</returns>
 
-        public static bool EliminarCliente(char numeroCuenta)
+        public static bool EliminarCuentaCliente(string numeroCuenta)
         {
             // Crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -232,6 +232,53 @@ namespace GenisysATM.Models
             // Parametros
             cmd.Parameters.Add(new SqlParameter("numero", SqlDbType.Char, 14));
             cmd.Parameters["numero"].Value = numeroCuenta;
+
+            try
+            {
+
+                // ejercutar comando
+                cmd.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (SqlException exe)
+            {
+
+                return false;
+            }
+            finally
+            {
+                // Cerrar conexion
+                conectar.CerrarConexion();
+            }
+
+        }
+
+
+
+        public static bool ActualizarCuentaCliente(string numeroCuenta, int idCliente, decimal saldo, string pin)
+        {
+            // Crear la conexion
+            Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
+
+
+            // Store Procedure
+            SqlCommand cmd = conectar.EjecutarComando("sp_ActualizarCuentaCliente");
+
+            // Establecer el comando del Store Procedure
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Parametros
+            cmd.Parameters.Add(new SqlParameter("numero", SqlDbType.Char, 14));
+            cmd.Parameters.Add(new SqlParameter("idCliente", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("saldo", SqlDbType.Decimal));
+            cmd.Parameters.Add(new SqlParameter("PIN", SqlDbType.Char, 4));
+
+
+            cmd.Parameters["numero"].Value = numeroCuenta;
+            cmd.Parameters["idCliente"].Value = idCliente;
+            cmd.Parameters["saldo"].Value = saldo;
+            cmd.Parameters["pin"].Value = pin;
 
             try
             {
