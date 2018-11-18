@@ -86,7 +86,7 @@ namespace GenisysATM.Models
         /// <param name="telefono">telefono del cliente (9 caracteres)</param>
         /// <param name="celular">celular del cliente (9 caracteres)</param>
         /// <returns>Retorna un cliente agregado </returns>
-        public static Cliente InsertarCliente(string nombre, string apellido, char identidad, string direccion, char telefono, char celular)
+        public static Cliente InsertarCliente(string nombre, string apellido, string identidad, string direccion, string telefono, string celular)
         {
             // Crear la conexion
             Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -204,19 +204,18 @@ namespace GenisysATM.Models
         /// <param name="celular"> celular del cliente (9 caracteres)</param>
         /// <returns>Retorna la actulizacion de los datos de un cliente</returns>
 
-        public static bool ActualizarCliente(int id, string nombre, string apellido, char identidad, string direccion, char telefono, char celular)
+        public static bool ActualizarCliente( string nombre, string apellido, string identidad, string direccion, string telefono, string celular)
         {
             // crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
 
             // Store Procedure
-            SqlCommand cmd = conectar.EjecutarComando("sp_ActualizarClienta");
+            SqlCommand cmd = conectar.EjecutarComando("sp_ActualizarCliente");
 
             // Establecer el comando del Store Procedure
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Valores de los campos
-            cmd.Parameters.Add(new SqlParameter("id", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("nombre", SqlDbType.NVarChar, 100));
             cmd.Parameters.Add(new SqlParameter("apellido", SqlDbType.Char, 13));
             cmd.Parameters.Add(new SqlParameter("identidad", SqlDbType.Char, 4));
@@ -225,15 +224,12 @@ namespace GenisysATM.Models
             cmd.Parameters.Add(new SqlParameter("celular", SqlDbType.Char, 9));
 
             // Remplazar los valores
-            cmd.Parameters["id"].Value = id;
             cmd.Parameters["nombre"].Value = nombre;
             cmd.Parameters["apellido"].Value = apellido;
             cmd.Parameters["identidad"].Value = identidad;
             cmd.Parameters["direccion"].Value = direccion;
             cmd.Parameters["telefono"].Value = telefono;
             cmd.Parameters["celular"].Value = celular;
-
-
 
 
             try

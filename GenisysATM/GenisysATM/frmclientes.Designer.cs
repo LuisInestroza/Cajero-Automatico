@@ -1,6 +1,6 @@
 ﻿namespace GenisysATM
 {
-    partial class clientesCRUD
+    partial class frmClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             this.btnEliminar = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnListar = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnActualizar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
@@ -45,7 +45,7 @@
             this.txtNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtApellido = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtCelular = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAgregar
@@ -61,6 +61,7 @@
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -75,6 +76,7 @@
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnListar
             // 
@@ -89,6 +91,7 @@
             this.btnListar.TabIndex = 2;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // btnActualizar
             // 
@@ -104,14 +107,15 @@
             this.btnActualizar.TabIndex = 3;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // dataGridView1
+            // dgvClientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 86);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(377, 149);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Location = new System.Drawing.Point(26, 86);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.Size = new System.Drawing.Size(377, 149);
+            this.dgvClientes.TabIndex = 4;
             // 
             // materialLabel1
             // 
@@ -281,7 +285,7 @@
             this.txtCelular.TabIndex = 16;
             this.txtCelular.UseSystemPasswordChar = false;
             // 
-            // clientesCRUD
+            // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -298,26 +302,24 @@
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.Name = "clientesCRUD";
-            this.Text = "clientesCRUD";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Name = "frmClientes";
+            this.Text = "Clientes";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialFlatButton btnAgregar;
         private MaterialSkin.Controls.MaterialFlatButton btnEliminar;
         private MaterialSkin.Controls.MaterialFlatButton btnListar;
         private MaterialSkin.Controls.MaterialFlatButton btnActualizar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvClientes;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
@@ -330,5 +332,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtNombre;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtApellido;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtCelular;
+        private MaterialSkin.Controls.MaterialFlatButton btnAgregar;
     }
 }
