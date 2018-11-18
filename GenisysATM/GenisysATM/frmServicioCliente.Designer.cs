@@ -78,7 +78,7 @@
             // 
             this.txtSaldo.Depth = 0;
             this.txtSaldo.Hint = "";
-            this.txtSaldo.Location = new System.Drawing.Point(396, 258);
+            this.txtSaldo.Location = new System.Drawing.Point(396, 291);
             this.txtSaldo.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtSaldo.Name = "txtSaldo";
             this.txtSaldo.PasswordChar = '\0';
@@ -110,7 +110,7 @@
             this.lbSaldo.Depth = 0;
             this.lbSaldo.Font = new System.Drawing.Font("Roboto", 11F);
             this.lbSaldo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbSaldo.Location = new System.Drawing.Point(339, 262);
+            this.lbSaldo.Location = new System.Drawing.Point(339, 295);
             this.lbSaldo.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbSaldo.Name = "lbSaldo";
             this.lbSaldo.Size = new System.Drawing.Size(51, 19);
@@ -183,13 +183,14 @@
             // btnListar
             // 
             this.btnListar.AutoSize = true;
+            this.btnListar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnListar.Depth = 0;
             this.btnListar.Location = new System.Drawing.Point(434, 112);
             this.btnListar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnListar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnListar.Name = "btnListar";
             this.btnListar.Primary = false;
-            this.btnListar.Size = new System.Drawing.Size(94, 36);
+            this.btnListar.Size = new System.Drawing.Size(58, 36);
             this.btnListar.TabIndex = 35;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
@@ -198,13 +199,14 @@
             // btnEliminar
             // 
             this.btnEliminar.AutoSize = true;
+            this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEliminar.Depth = 0;
             this.btnEliminar.Location = new System.Drawing.Point(536, 112);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Primary = false;
-            this.btnEliminar.Size = new System.Drawing.Size(94, 36);
+            this.btnEliminar.Size = new System.Drawing.Size(74, 36);
             this.btnEliminar.TabIndex = 34;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -213,13 +215,14 @@
             // btnAgregar
             // 
             this.btnAgregar.AutoSize = true;
+            this.btnAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAgregar.Depth = 0;
             this.btnAgregar.Location = new System.Drawing.Point(434, 160);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Primary = false;
-            this.btnAgregar.Size = new System.Drawing.Size(94, 36);
+            this.btnAgregar.Size = new System.Drawing.Size(74, 36);
             this.btnAgregar.TabIndex = 33;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
