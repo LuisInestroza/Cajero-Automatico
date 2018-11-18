@@ -102,11 +102,11 @@
     <Compile Include="frmServicioPublico.Designer.cs">
       <DependentUpon>frmServicioPublico.cs</DependentUpon>
     </Compile>
-    <Compile Include="tarjetaCreditoCRUD.cs">
+    <Compile Include="frmTarjetaCredito.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tarjetaCreditoCRUD.Designer.cs">
-      <DependentUpon>tarjetaCreditoCRUD.cs</DependentUpon>
+    <Compile Include="frmTarjetaCredito.Designer.cs">
+      <DependentUpon>frmTarjetaCredito.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
@@ -141,8 +141,8 @@
     <EmbeddedResource Include="frmServicioPublico.resx">
       <DependentUpon>frmServicioPublico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tarjetaCreditoCRUD.resx">
-      <DependentUpon>tarjetaCreditoCRUD.cs</DependentUpon>
+    <EmbeddedResource Include="frmTarjetaCredito.resx">
+      <DependentUpon>frmTarjetaCredito.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -14,11 +14,11 @@ using MaterialSkin.Controls;
 
 namespace GenisysATM
 {
-    public partial class frmServicioPublico : MaterialForm
+    public partial class frmTarjetaCredito : MaterialForm
     {
         private readonly MaterialSkinManager materialSkinManager;
 
-        public frmServicioPublico()
+        public frmTarjetaCredito()
         {
             InitializeComponent();
 
@@ -34,62 +34,58 @@ namespace GenisysATM
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-            Models.ServicioPublico listar = new Models.ServicioPublico();
+            Models.TarjetaCredito listar = new Models.TarjetaCredito();
 
-            if (listar.buscarServicioPublico(Convert.ToInt16(txtID), txtDescripcion.Text))
+            if (listar.ObtenerTarjeta(Convert.ToInt16(txtID)))
             {
-                MessageBox.Show("Servicio Encontrado");
+                MessageBox.Show("Tarjeta de credito listada");
             }
             else
             {
-                MessageBox.Show("Servicio No Encontrado");
+                MessageBox.Show("Tarjeta de credito no listada");
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Models.ServicioPublico eliminar = new Models.ServicioPublico();
+            Models.TarjetaCredito eliminar = new Models.TarjetaCredito();
 
-            if (eliminar.EliminarServicioPublico(Convert.ToInt16(txtID)))
+            if (eliminar.EliminarTarjetaCredito(Convert.ToInt16(txtIDCliente)))
             {
-                MessageBox.Show("Servicio Eliminado");
+                MessageBox.Show("Tarjeta de credito eliminada");
             }
             else
             {
-                MessageBox.Show("Servicio No Eliminado");
+                MessageBox.Show("Tarjeta de credito no eliminada");
             }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Models.ServicioPublico agregar = new Models.ServicioPublico();
+            Models.TarjetaCredito agregar = new Models.TarjetaCredito();
 
-            if (agregar.InsertarServicioPublico(txtDescripcion.Text))
+            if (agregar.InsertarTarjeta(txtDescripcion.Text, Convert.ToDecimal(txtMonto.Text), Convert.ToDecimal(txtLimite.Text), Convert.ToInt16(txtIDCliente.Text)))
             {
-                MessageBox.Show("Servicio Agregado");
+                MessageBox.Show("Tarjeta de credito agregado");
             }
             else
             {
-                MessageBox.Show("Servicio No Agregado");
+                MessageBox.Show("Tarjeta de credito no agregado");
             }
-            
-               
         }
-        
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            Models.ServicioPublico actualizar = new Models.ServicioPublico();
+            Models.TarjetaCredito actualizar = new Models.TarjetaCredito();
 
-            if (actualizar.ActualizarServicioPublico(Convert.ToInt16(txtID), txtDescripcion.Text))
+            if (actualizar.ActualizarTarjeta(Convert.ToInt16(txtID.Text), txtDescripcion.Text, Convert.ToDecimal(txtMonto.Text), Convert.ToDecimal(txtLimite.Text), Convert.ToInt16(txtIDCliente.Text)))
             {
-                MessageBox.Show("Servicio Actualizado");
+                MessageBox.Show("Tarjeta de credito actualizada");
             }
             else
             {
-                MessageBox.Show("Servicio No Actualizado");
+                MessageBox.Show("Tarjeta de credito no actualizada");
             }
         }
     }
-    
 }
