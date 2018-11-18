@@ -25,7 +25,7 @@ namespace GenisysATM.Models
         /// <param name="id"> clave primaria (entero)</param>
         /// <param name="descripcion"> descripcion del servicio publico </param>
         /// <returns> Retorna listando todos los servicio de la base de datos </returns>
-        public static ServicioPublico buscarServicioPublico(int id, string descripcion)
+        public bool buscarServicioPublico(int id, string descripcion)
         {
             //  Realizar conexion
             Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -59,11 +59,11 @@ namespace GenisysATM.Models
                
                 }
 
-                return buscar;
+                return true;
             }
             catch (SqlException ex)
             {
-                return buscar;
+                return false;
             }
             finally
             {
@@ -77,7 +77,7 @@ namespace GenisysATM.Models
         /// </summary>
         /// <param name="descripcion"> descripcion del servicio publico </param>
         /// <returns> Retorna agregando un nuevo servicio de la base de datos </returns>
-        public static ServicioPublico InsertarServicioPublico(string descripcion)
+        public bool InsertarServicioPublico(string descripcion)
         {
             // Crear la conexion
             Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -114,11 +114,11 @@ namespace GenisysATM.Models
                   
                 }
 
-                return insertarServicio;
+                return true;
             }
             catch (SqlException exe)
             {
-                return insertarServicio;
+                return false;
             }
             finally
             {
@@ -133,7 +133,7 @@ namespace GenisysATM.Models
         /// </summary>
         /// <param name="id"> clave primaria (entero)</param>
         /// <returns> Retorna eliminado servicio de la base de datos </returns>
-        public static bool EliminarServicioPublico(int id)
+        public bool EliminarServicioPublico(int id)
         {
             // Crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -176,7 +176,7 @@ namespace GenisysATM.Models
         /// <param name="id"> clave primaria (entero)</param>
         /// <param name="descripcion"> descripcion del servicio publico </param>
         /// <returns> Retorna actualizando todos los servicio de la base de datos </returns>
-        public static bool ActualizarServicioPublico(int id, string descripcion)
+        public bool ActualizarServicioPublico(int id, string descripcion)
         {
             // crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");

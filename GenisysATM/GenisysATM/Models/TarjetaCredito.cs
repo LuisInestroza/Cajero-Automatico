@@ -25,7 +25,7 @@ namespace GenisysATM.Models
         /// </summary>
         /// <param name="idCliente"> campo primario de la tabla Cliente (entero)9</param>
         /// <returns>Retorna mostrando las tajetas de credito registras</returns>
-        public static TarjetaCredito ObtenerTarjeta(int idCliente)
+        public bool ObtenerTarjeta(int idCliente)
         {
             // Crear la conexion
             Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -64,11 +64,11 @@ namespace GenisysATM.Models
              
                 }
 
-                return resultado;
+                return true;
             }
             catch (SqlException ex)
             {
-                return resultado;
+                return false;
             }
             finally
             {
@@ -86,7 +86,7 @@ namespace GenisysATM.Models
         /// <param name="idCliente">campo primario de la tabla Cliente (entero) </param>
         /// <returns> Retorna agregando una nueva tarjeta de credito</returns>
 
-        public static TarjetaCredito InsertarTarjeta(string descripcion, decimal monto, decimal limite, int idCliente)
+        public bool  InsertarTarjeta(string descripcion, decimal monto, decimal limite, int idCliente)
         {
             // Crear la conexion
             Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -131,11 +131,11 @@ namespace GenisysATM.Models
 
                 }
 
-                return insertar;
+                return true;
             }
             catch (SqlException exe)
             {
-                return insertar;
+                return true;
             }
             finally
             {
@@ -150,7 +150,7 @@ namespace GenisysATM.Models
         /// <param name="idCliente">campo primario de la tabla Cliente (entero)</param>
         /// <returns> Retorna eliminado una tarjeta de credito</returns>
 
-        public static bool EliminarTarjetaCredito(int idCliente)
+        public bool EliminarTarjetaCredito(int idCliente)
         {
             // Crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -196,7 +196,7 @@ namespace GenisysATM.Models
         /// <param name="idCliente">campo primario de la tabla Cliente (entero) </param>
         /// <returns> Retorna actualizando una nueva tarjeta de credito</returns>
 
-        public static bool ActualizarTarjeta(int id, string descripcion, decimal monto, decimal limite, int idCliente)
+        public bool ActualizarTarjeta(int id, string descripcion, decimal monto, decimal limite, int idCliente)
         {
             // crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");

@@ -31,5 +31,46 @@ namespace GenisysATM
                 Accent.Orange400, TextShade.WHITE
             );
         }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            frmClientes abrir = new frmClientes();
+            abrir.Show();
+        }
+
+        private void btnCuentaCliente_Click(object sender, EventArgs e)
+        {
+            frmCuentaCliente abrir = new frmCuentaCliente();
+            abrir.Show();
+        }
+
+        private void btnServicioCliente_Click(object sender, EventArgs e)
+        {
+            frmServicioCliente abrir = new frmServicioCliente();
+            abrir.Show();
+        }
+
+        private void btnTarjetaCredito_Click(object sender, EventArgs e)
+        {
+            frmTarjetaCredito abrir = new frmTarjetaCredito();
+            abrir.Show();
+        }
+
+        private void btnServicioPublico_Click(object sender, EventArgs e)
+        {
+            frmServicioPublico abrir = new frmServicioPublico();
+            abrir.Show();
+        }
+
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            frmConfiguracion abrir = new frmConfiguracion();
+            abrir.Show();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

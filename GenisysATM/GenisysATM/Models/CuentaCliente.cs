@@ -77,7 +77,7 @@ namespace GenisysATM.Models
         /// <param name="cuenta">el número de cuenta del cliente</param>
         /// <param name="debito">el valor a ser debitado del saldo de la cuenta</param>
         /// <returns>true si el débidto pudo ser realizado. false en caso contrario.</returns>
-        public static bool ActualizarSaldo(string cuenta, decimal debito)
+        public  bool ActualizarSaldo(string cuenta, decimal debito)
         {
             Conexion conn = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
             CuentaCliente laCuenta = CuentaCliente.ObtenerCliente(cuenta);
@@ -152,7 +152,7 @@ namespace GenisysATM.Models
         /// <param name="saldo"> cantidad de dinero en la cuenta (decimal)</param>
         /// <param name="pin"> codigo de la cuenta (caracter 4)</param>
         /// <returns> Retorna agregando una nueva cuenta</returns>
-        public static CuentaCliente InsertarCuentaCliente(string numero, int idCliente, decimal saldo, string pin)
+        public bool InsertarCuentaCliente(string numero, int idCliente, decimal saldo, string pin)
         {
             // Crear la conexion
             Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -198,11 +198,11 @@ namespace GenisysATM.Models
 
                 }
 
-                return insertar;
+                return true;
             }
             catch (SqlException exe)
             {
-                return insertar;
+                return false;
             }
             finally
             {
@@ -217,7 +217,7 @@ namespace GenisysATM.Models
         /// <param name="numeroCuenta"> numero de la cuenta del cliete (caracter 14)</param>
         /// <returns> Retorna eliminado una cuenta de la base de datos</returns>
 
-        public static bool EliminarCuentaCliente(string numeroCuenta)
+        public  bool EliminarCuentaCliente(string numeroCuenta)
         {
             // Crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -256,7 +256,7 @@ namespace GenisysATM.Models
 
 
 
-        public static bool ActualizarCuentaCliente(string numeroCuenta, int idCliente, decimal saldo, string pin)
+        public bool ActualizarCuentaCliente(string numeroCuenta, int idCliente, decimal saldo, string pin)
         {
             // Crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");

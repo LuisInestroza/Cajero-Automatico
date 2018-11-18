@@ -28,7 +28,7 @@ namespace GenisysATM.Models
         /// </summary>
         /// <param name="key"> valor de key </param>
         /// <returns>Retorna listando todas las configuraciones</returns>
-        public static string ObtenerConfiguracion(string key)
+        public static bool ObtenerConfiguracion(string key)
         {
             string valor = "";
             SqlDataReader rdr;
@@ -70,7 +70,7 @@ namespace GenisysATM.Models
         /// <param name="valor"> valor del appkey (caracter 50)</param>
         /// <param name="descripcion"> descripcion de la configuracion(caracteres 200)</param>
         /// <returns>Retorna agregango una nueva configuracion</returns>
-        public static Configuracion InsertarConfiguracion(string appkey, string valor, string descripcion)
+        public bool InsertarConfiguracion(string appkey, string valor, string descripcion)
         {
             // Crear la conexion
             Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -111,11 +111,11 @@ namespace GenisysATM.Models
 
                 }
 
-                return insertarConfiguracion;
+                return true;
             }
             catch (SqlException exe)
             {
-                return insertarConfiguracion;
+                return false;
             }
             finally
             {
@@ -130,7 +130,7 @@ namespace GenisysATM.Models
        /// </summary>
        /// <param name="id"> valor de la llave primaria (entero)</param>
        /// <returns> Retorna eliminando una configuracion</returns>
-        public static bool EliminarConfiguracion(int id)
+        public bool EliminarConfiguracion(int id)
         {
             // Crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -176,7 +176,7 @@ namespace GenisysATM.Models
         /// <param name="valor"> valor del appkey (caracter 50)</param>
         /// <param name="descripcion"> descripcion de la configuracion(caracteres 200)</param>
         /// <returns>Retorna actulizando una nueva configuracion</returns>
-        public static bool ActualizarConfiguracion(int id, string appkey, string valor, string descripcion)
+        public  bool ActualizarConfiguracion(int id, string appkey, string valor, string descripcion)
         {
             // crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");

@@ -35,17 +35,21 @@ namespace GenisysATM
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             Models.ATM atm = new Models.ATM();
-            Models.
-            
 
             if (atm.VerificarInicio(txtCuenta.Text, txtPIN.Text))
             {
                 MessageBox.Show("Bienvenido al sistema de ATM Genisys", "Información");
+
+     
                 frmMenuPrincipal abrir = new frmMenuPrincipal();
                 abrir.Show();
+
+               
             }
             else
                 MessageBox.Show("Número de cuenta o PIN erróneos", "Información");
+
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

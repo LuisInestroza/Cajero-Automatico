@@ -29,7 +29,7 @@ namespace GenisysATM.Models
         /// </summary>
         /// <param name="id"> clave primaria (entero)</param>
         /// <returns>Retorna listando todos los servicios del cliente</returns>
-        public static ServicioCliente ObtenerServicioCliente(int id)
+        public bool  ObtenerServicioCliente(int id)
         {
             Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
             string sql;
@@ -60,11 +60,11 @@ namespace GenisysATM.Models
                     // Remover espacios
                 }
 
-                return resultado;
+                return true;
             }
             catch (SqlException ex)
             {
-                return resultado;
+                return false;
             }
             finally
             {
@@ -80,7 +80,7 @@ namespace GenisysATM.Models
         /// <param name="saldo"> saldo del servicio (entero)</param>
         /// <returns>Retorna agregando un nuevo servicio del cliente </returns>
      
-        public static ServicioCliente InsertarServicioCliente(int idCliente, int idServicio, decimal saldo)
+        public bool InsertarServicioCliente(int idCliente, int idServicio, decimal saldo)
         {
             // Crear la conexion
             Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -123,11 +123,11 @@ namespace GenisysATM.Models
 
                 }
 
-                return insertar;
+                return true;
             }
             catch (SqlException exe)
             {
-                return insertar;
+                return false;
             }
             finally
             {
@@ -142,7 +142,7 @@ namespace GenisysATM.Models
         /// </summary>
         /// <param name="id"> clave primaria (entero)</param>
         /// <returns>Retorna eliminado un  servicio del cliente</returns>
-        public static bool EliminarServicioCliente(int id)
+        public  bool EliminarServicioCliente(int id)
         {
             // Crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -187,7 +187,7 @@ namespace GenisysATM.Models
         /// <param name="idServicio">id del servicio (entero)</param>
         /// <param name="saldo"> saldo del servicio (entero)</param>
         /// <returns>Retorna actualizando un servicio del cliente </returns>
-        public static bool ActualizarSercicioCliente(int id, int idCliente, int idServicio, decimal saldo)
+        public  bool ActualizarSercicioCliente(int id, int idCliente, int idServicio, decimal saldo)
         {
             // crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");

@@ -37,6 +37,7 @@ namespace GenisysATM
         {
             Models.Cliente listar = new Models.Cliente();
 
+
             if(listar.ObtenerCliente(txtIdentidad.Text))
             {
                 MessageBox.Show("Cliente Encontrado");
@@ -52,7 +53,7 @@ namespace GenisysATM
         {
             Models.Cliente agregar = new Models.Cliente();
 
-            if (agregar.InsertarCliente(txtNombre.Text, txtApellido.Text, txtIdentidad.Text, txtDireccion.Text, txtTelefono.Text, txtCelular.Text))
+            if (agregar.InsertarCliente (txtNombre.Text, txtApellido.Text, txtIdentidad.Text, txtDireccion.Text, txtTelefono.Text, txtCelular.Text))
             {
                 MessageBox.Show("Cliente Registrado");
             } 

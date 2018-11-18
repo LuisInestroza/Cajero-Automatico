@@ -27,7 +27,7 @@ namespace GenisysATM.Models
         /// </summary>
         /// <param name="identidad">La identidad del cliente (13 caracteres)</param>
         /// <returns>Un objeto de tipo Cliente.</returns>
-        public static Cliente ObtenerCliente(string identidad)
+        public bool ObtenerCliente(string identidad)
         {
             Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
             string sql;
@@ -63,11 +63,11 @@ namespace GenisysATM.Models
                     // Remover espacios
                 }
 
-                return resultado;
+                return true;
             }
             catch (SqlException ex)
             {
-                return resultado;
+                return false;
             }
             finally
             {
@@ -86,7 +86,7 @@ namespace GenisysATM.Models
         /// <param name="telefono">telefono del cliente (9 caracteres)</param>
         /// <param name="celular">celular del cliente (9 caracteres)</param>
         /// <returns>Retorna un cliente agregado </returns>
-        public static Cliente InsertarCliente(string nombre, string apellido, string identidad, string direccion, string telefono, string celular)
+        public bool InsertarCliente(string nombre, string apellido, string identidad, string direccion, string telefono, string celular)
         {
             // Crear la conexion
             Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -98,7 +98,7 @@ namespace GenisysATM.Models
             Cliente insertar = new Cliente();
 
             // Query Insert
-            sql = @"INSERT INTO ATM.Cliente (nombres, apellidos, identidad, direccion, telefono, celular) VALUES (@Nombre, @Apellido, @Identidad, @Direccion, @Telefono, @Celular)";
+            sql = @"INSERT INTO ATM.Cliente(nombres, apellidos, identidad, direccion, telefono, celular) VALUES (@Nombre, @Apellido, @Identidad, @Direccion, @Telefono, @Celular)";
 
             SqlCommand cmd = conexion.EjecutarComando(sql);
             SqlDataReader rdr;
@@ -135,11 +135,11 @@ namespace GenisysATM.Models
 
                 }
                 
-                return insertar;
+                return true;
             }
             catch(SqlException exe)
             {
-                return insertar;
+                return false;
             }
             finally
             {
@@ -155,7 +155,7 @@ namespace GenisysATM.Models
         /// <param name="identidad">identidad del cliente (13 caracteres)9</param>
         /// <returns>Retorna eliminado un cliente</returns>
 
-        public static bool  EliminarCliente(string identidad)
+        public bool  EliminarCliente(string identidad)
         {
             // Crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -204,7 +204,7 @@ namespace GenisysATM.Models
         /// <param name="celular"> celular del cliente (9 caracteres)</param>
         /// <returns>Retorna la actulizacion de los datos de un cliente</returns>
 
-        public static bool ActualizarCliente( string nombre, string apellido, string identidad, string direccion, string telefono, string celular)
+        public  bool ActualizarCliente( string nombre, string apellido, string identidad, string direccion, string telefono, string celular)
         {
             // crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
