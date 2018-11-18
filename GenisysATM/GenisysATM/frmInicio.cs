@@ -35,7 +35,7 @@ namespace GenisysATM
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             Models.ATM atm = new Models.ATM();
-
+            Models.
             
 
             if (atm.VerificarInicio(txtCuenta.Text, txtPIN.Text))

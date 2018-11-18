@@ -70,7 +70,7 @@ namespace GenisysATM.Models
         /// <param name="valor"> valor del appkey (caracter 50)</param>
         /// <param name="descripcion"> descripcion de la configuracion(caracteres 200)</param>
         /// <returns>Retorna agregango una nueva configuracion</returns>
-        public static Configuracion InsertarConfiguracion(char appkey, char valor, string descripcion)
+        public static Configuracion InsertarConfiguracion(string appkey, string valor, string descripcion)
         {
             // Crear la conexion
             Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
@@ -176,7 +176,7 @@ namespace GenisysATM.Models
         /// <param name="valor"> valor del appkey (caracter 50)</param>
         /// <param name="descripcion"> descripcion de la configuracion(caracteres 200)</param>
         /// <returns>Retorna actulizando una nueva configuracion</returns>
-        public static bool ActualizarConfiguracion(int id, char appkey, char valor, string descripcion)
+        public static bool ActualizarConfiguracion(int id, string appkey, string valor, string descripcion)
         {
             // crear la conexion
             Conexion conectar = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
